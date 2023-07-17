@@ -1,0 +1,46 @@
+@echo off
+title IP Pinger
+cls
+color 0C                                                                                                                                                               
+echo  /$$$$$$ /$$$$$$$        /$$$$$$$  /$$
+echo l_  $$_/l $$__  $$      l $$__  $$lS/
+echo   l $$  l $$  \ $$      l $$  \ $$ /$$ /$$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$
+echo   l $$  l $$$$$$$/      l $$$$$$$/l $$l $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$
+echo   l $$  l $$____/       l $$____/ l $$l $$  \ $$l $$  \ $$l $$$$$$$$l $$  \__/
+echo   l $$  l $$            l $$      l $$l $$  l $$l $$  l $$l $$_____/l $$
+echo  /$$$$$$l $$            l $$      l $$l $$  l $$l  $$$$$$$l  $$$$$$$l $$
+echo l______l__/            l__/      l__/l__/  l__/ \____  $$l_______/l__/
+echo                                                  /$$  \ $$
+echo                                                 l  $$$$$$/
+echo                                                  \______/
+echo ========================================        
+echo           ~ CTRL+C TO EXIT ~             
+echo ======================================== 
+set /p x=Enter IP Here:
+echo.
+echo ========================================================
+PING -n 1 %x% | FIND "TTL="
+IF ERRORLEVEL 1 (echo IP has been terminated)               
+set /a ZULA=(%Random%%%9)+1
+color %ZULA%
+ping -t 1 0 10 127.0.0.1 >nul
+GoTo top+-
+:choice
+set /p c=Do you want to exit IP Pinger{Y/N}?
+if /I "%c%" EQU "y" goto :q
+if /I "%c%" EQU "n" goto :w
+goto :choice
+
+:q
+echo Terminating Program...
+timeout /t 2 >nul
+exit 
+
+:w
+:top
+PING -n 1 %x% | FIND "TTL="
+IF ERRORLEVEL 1 (echo IP has been terminated)               
+set /a ZULA=(%Random%%%9)+1
+color %ZULA%
+ping -t 1 0 10 127.0.0.1 >nul
+GoTo top+-
