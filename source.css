@@ -207,7 +207,7 @@ $$  /   \$$ |$$ |  $$ |   $$ |   $$$$$$$$\ $$ |  $$ |$$ | \_/ $$ |$$ |  $$ |$$ |
 \__/     \__|\__|  \__|   \__|   \________|\__|  \__|\__|     \__|\__|  \__|\__|  \__|\__|  \__|
 */
 div[class*="typeWindows-"]::after {
-  content: '🔮ANOTHER ETERNITY🔮 v1.1.3';
+  content: 'Twangy's Theme v1.1.3';
   font-weight: bold;
   font-size: 14px;
   line-height: 30px;
